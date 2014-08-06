@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<style>
+	 	.point {
+	    width:5px;
+	    height:5px;
+	    border-radius:8px;
+	    background: black;
+	    position:absolute;
+	}
+
+		</style>
+	</head>
+		<body>
+			<div id='center'></div>
+			
+			<script src="libs/jquery.js"></script>
+			<script type="text/javascript">
+
+
+				var angle = 0;
+				var counter = 0;
+
+				var interval =	setInterval(draw, 10)
+
+
+					function draw (){
+
+						
+							counter +=1;
+							// console.log(counter)
+
+						angle += 0.01;
+
+						var xcenter = 100;
+						var ycenter = 100;
+						var r = 100;
+
+					for(var i = 0; i < angle; i++) {
+
+						// if(angle == 6.28318531){break}
+
+	    			var x = Math.floor(xcenter + (r * Math.cos(angle)));
+	   				var y = Math.floor(ycenter + (r * Math.sin(angle)));  
+
+	    			$("#center").append("<div class='point' style='left:"+ x +"px;top:"+ y +"px'></div>");    
+
+	    			 console.log(angle)
+
+	    			if (counter == 630){clearInterval(interval)}
+
+	    	
+	}
+}
+
+
+ 			</script>
+		</body>
+</html>
+
+
