@@ -1,0 +1,52 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<input type = "textarea" id="the-text">
+		<button onclick="multiplication()">click</button>
+		<div id="wrapper"></div>
+
+		<script src="libs/jquery.js"></script>
+		<script type="text/javascript">
+
+		
+		function multiplication() {
+
+				var str = "";
+				var func = document.getElementById("the-text");
+				var number = func.value;
+
+				for (var i = 1; i < number; i++){
+
+					var result = i*i;
+					str += result;
+
+
+
+				}
+
+				var lastElement = str.charAt(number - 1);
+
+				if (number < 0 && number > 3200000 && typeof number !== 'number'){
+
+					    $('#wrapper').append("<div> illeagle </div>")
+					
+
+				}
+				else{
+
+						$("#wrapper").append("<div>" + str + "</div>");
+				
+						 $("#wrapper").append("<div>" + lastElement + "</div>");
+
+				
+				}
+
+				
+
+
+			}
+
+		</script>
+	</body>
+</html>
