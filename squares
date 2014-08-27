@@ -1,0 +1,56 @@
+<html>
+	<head>	
+	</head>
+	<body>
+		<label  for="the-text">input</label>
+		<input type="text" id="the-text"/>
+		<button onclick="squares()">output</button>
+
+		<script type="text/javascript">
+
+		function squares(){
+
+
+			var n = document.getElementById('the-text').value;
+			var sqn = n*n;
+
+			var arr = [];
+
+
+  					for(var i=0; i < sqn; i++){
+
+						arr.push([]);
+
+						arr[i].push( new Array(sqn));
+
+						for(var j=0; j < sqn; j++){
+
+						arr[i][j] = 0;
+
+
+
+
+						};
+							
+
+							 // console.log(arr[i])
+					};
+
+
+					arr[0][1] = 1;
+					arr[2][3] = 2;
+					arr[1][2] = 3;
+
+					for(var x = 0; x < arr.length; x++){
+						for (var y = 0; y < arr[i].length; y++){
+							console.log(arr[i])
+						}
+					}
+
+					
+		
+		}
+
+		</script>
+	</body>
+</html>
